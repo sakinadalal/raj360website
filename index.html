@@ -17,12 +17,11 @@ body {
 .navbar {
     position: sticky;
     top: 0;
-    background: rgba(0,0,0,0.8);
-    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     padding: 15px 40px;
-    z-index: 1000;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
 }
 
 .navbar a {
@@ -31,7 +30,7 @@ body {
     text-decoration: none;
 }
 
-/* HERO */
+/* HERO SLIDER */
 header {
     height: 90vh;
     display: flex;
@@ -40,7 +39,10 @@ header {
     align-items: center;
     text-align: center;
 
-    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center/cover;
+    background-size: cover;
+    background-position: center;
+
+    animation: slider 15s infinite;
 }
 
 header h1 {
@@ -98,6 +100,22 @@ footer {
     padding: 20px;
     background: black;
 }
+
+/* SLIDER KEYFRAMES */
+@keyframes slider {
+    0% {
+        background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945');
+    }
+    33% {
+        background-image: url('https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a');
+    }
+    66% {
+        background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+    }
+    100% {
+        background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945');
+    }
+}
 </style>
 </head>
 
@@ -126,7 +144,7 @@ footer {
     <h2>About</h2>
     <p>
         I’m Raj Bharmal, a Google Street View Trusted Photographer from Gujarat. 
-        I help businesses grow online by creating high-quality 360° virtual tours that increase visibility, trust, and customer engagement.
+        I help businesses grow online with high-quality 360° virtual tours that increase visibility and trust.
     </p>
 </section>
 
@@ -195,7 +213,6 @@ footer {
     <p>Location: Rajkot</p>
 </section>
 
-<!-- FOOTER -->
 <footer>
     © 2026 Raj360View
 </footer>
