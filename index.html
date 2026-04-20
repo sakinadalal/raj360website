@@ -8,214 +8,103 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f0f0f;
+    font-family: Arial;
+    background: black;
     color: white;
 }
 
 /* NAVBAR */
 .navbar {
-    position: sticky;
+    position: absolute;
+    width: 100%;
     top: 0;
     display: flex;
     justify-content: space-between;
-    padding: 15px 40px;
-    background: rgba(0,0,0,0.8);
-    backdrop-filter: blur(10px);
+    padding: 20px;
+    z-index: 10;
 }
 
-.navbar a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+/* SLIDER */
+.slider {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* HERO SLIDER */
-header {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
-
-    animation: slider 15s infinite;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-header h1 {
-    font-size: 48px;
+.slide.active {
+    opacity: 1;
 }
 
-header p {
-    opacity: 0.9;
-}
-
-/* BUTTON */
-.btn {
-    background: linear-gradient(135deg,#d4af37,#000);
-    padding: 12px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    color: white;
-    margin-top: 20px;
-}
-
-/* SECTION */
-section {
-    padding: 60px 20px;
-}
-
-/* SERVICES */
-.service-box {
-    background: #1a1a1a;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-/* PORTFOLIO */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap: 20px;
-}
-
-.card {
-    background: #1a1a1a;
-    padding: 15px;
-    border-radius: 15px;
-}
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* FOOTER */
-footer {
+/* TEXT */
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     text-align: center;
-    padding: 20px;
-    background: black;
 }
 
-/* SLIDER KEYFRAMES */
-@keyframes slider {
-    0% {
-        background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945');
-    }
-    33% {
-        background-image: url('https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a');
-    }
-    66% {
-        background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
-    }
-    100% {
-        background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945');
-    }
+.overlay h1 {
+    font-size: 50px;
+}
+
+.overlay p {
+    font-size: 20px;
+}
+
+.btn {
+    background: gold;
+    color: black;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 20px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
     <h2>Raj360View</h2>
-    <div>
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-    </div>
 </div>
 
-<!-- HERO -->
-<header>
-    <h1>360° Virtual Tour Services</h1>
-    <p>Google Street View Trusted Photographer | 1000+ Shoots</p>
-    <a href="#contact" class="btn">Book Now</a>
-</header>
+<!-- SLIDER -->
+<div class="slider">
 
-<!-- ABOUT -->
-<section id="about">
-    <h2>About</h2>
-    <p>
-        I’m Raj Bharmal, a Google Street View Trusted Photographer from Gujarat. 
-        I help businesses grow online with high-quality 360° virtual tours that increase visibility and trust.
-    </p>
-</section>
+    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c')"></div>
 
-<!-- SERVICES -->
-<section>
-    <h2>Services</h2>
-    <div class="service-box">Hotel & Resort 360</div>
-    <div class="service-box">Showroom 360</div>
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio">
-    <h2>Portfolio</h2>
-
-    <h3>Hotel Projects</h3>
-    <div class="grid">
-
-        <div class="card">
-            <a href="https://maps.app.goo.gl/xYgYyx84UpZfcdBy8" target="_blank">
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
-            </a>
-            <p>AFM Food Mall</p>
-        </div>
-
-        <div class="card">
-            <a href="https://maps.app.goo.gl/7HFfiTai1wpWVrwC9" target="_blank">
-                <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
-            </a>
-            <p>Hotel The Grand Vaibhav</p>
-        </div>
-
-        <div class="card">
-            <a href="https://maps.app.goo.gl/aKa4pGG8SzQiNbSU8" target="_blank">
-                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
-            </a>
-            <p>The Grand Thakar</p>
-        </div>
-
+    <div class="overlay">
+        <h1>360° Virtual Tour Services</h1>
+        <p>Google Street View Trusted Photographer | 1000+ Shoots</p>
+        <a href="#contact" class="btn">Book Now</a>
     </div>
 
-    <h3>Showroom Projects</h3>
-    <div class="grid">
+</div>
 
-        <div class="card">
-            <a href="https://maps.app.goo.gl/FbUc7rCTdoY8vZYa8" target="_blank">
-                <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a">
-            </a>
-            <p>PHYSIOFIT</p>
-        </div>
+<script>
+let slides = document.querySelectorAll('.slide');
+let index = 0;
 
-        <div class="card">
-            <a href="https://maps.app.goo.gl/ZT7kB1g3DhYMQWWw7" target="_blank">
-                <img src="https://images.unsplash.com/photo-1582582429416-1d8f0d0e0cbb">
-            </a>
-            <p>Silk Touch</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Phone: +91 9898399952</p>
-    <p>Email: info@rajtechnology.com</p>
-    <p>Location: Rajkot</p>
-</section>
-
-<footer>
-    © 2026 Raj360View
-</footer>
+setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+}, 4000);
+</script>
 
 </body>
 </html>
