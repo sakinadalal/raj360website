@@ -9,7 +9,7 @@
 body {
     margin: 0;
     font-family: Arial;
-    background: black;
+    background: #0f0f0f;
     color: white;
 }
 
@@ -20,8 +20,14 @@ body {
     top: 0;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 40px;
     z-index: 10;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
 }
 
 /* SLIDER */
@@ -55,7 +61,7 @@ body {
 }
 
 .overlay h1 {
-    font-size: 50px;
+    font-size: 48px;
 }
 
 .overlay p {
@@ -63,21 +69,64 @@ body {
 }
 
 .btn {
-    background: gold;
-    color: black;
+    background: linear-gradient(135deg,#d4af37,#000);
     padding: 12px 25px;
-    text-decoration: none;
     border-radius: 30px;
-    display: inline-block;
+    text-decoration: none;
+    color: white;
     margin-top: 20px;
+    display: inline-block;
+}
+
+/* SECTION */
+section {
+    padding: 60px 20px;
+}
+
+/* SERVICES */
+.service-box {
+    background: #1a1a1a;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* PORTFOLIO */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
     <h2>Raj360View</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </div>
 </div>
 
 <!-- SLIDER -->
@@ -94,6 +143,70 @@ body {
     </div>
 
 </div>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About</h2>
+    <p>
+        I’m Raj Bharmal, a Google Street View Trusted Photographer from Gujarat. 
+        I help businesses grow online with high-quality 360° virtual tours.
+    </p>
+</section>
+
+<!-- SERVICES -->
+<section>
+    <h2>Services</h2>
+    <div class="service-box">Hotel & Resort 360</div>
+    <div class="service-box">Showroom 360</div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+    <h2>Portfolio</h2>
+
+    <h3>Hotel Projects</h3>
+    <div class="grid">
+
+        <div class="card">
+            <a href="https://maps.app.goo.gl/xYgYyx84UpZfcdBy8" target="_blank">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+            </a>
+            <p>AFM Food Mall</p>
+        </div>
+
+        <div class="card">
+            <a href="https://maps.app.goo.gl/7HFfiTai1wpWVrwC9" target="_blank">
+                <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
+            </a>
+            <p>Hotel Grand Vaibhav</p>
+        </div>
+
+    </div>
+
+    <h3>Showroom Projects</h3>
+    <div class="grid">
+
+        <div class="card">
+            <a href="https://maps.app.goo.gl/FbUc7rCTdoY8vZYa8" target="_blank">
+                <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a">
+            </a>
+            <p>Physiofit</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Phone: +91 9898399952</p>
+    <p>Email: info@rajtechnology.com</p>
+    <p>Location: Rajkot</p>
+</section>
+
+<footer>
+    © 2026 Raj360View
+</footer>
 
 <script>
 let slides = document.querySelectorAll('.slide');
