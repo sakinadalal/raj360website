@@ -3,15 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Raj Technology | 360 Virtual Tour</title>
+
+<title>360 Virtual Tour - Raj Technology</title>
 
 <style>
+
+/* ===== BODY ===== */
 body {
-    font-family: Arial;
     margin: 0;
+    font-family: Arial, sans-serif;
     background: #f5f5f5;
 }
 
+/* ===== NAVBAR ===== */
 .navbar {
     position: sticky;
     top: 0;
@@ -27,199 +31,196 @@ body {
     padding: 15px 40px;
 }
 
+.navbar h2 {
+    color: white;
+    letter-spacing: 2px;
+}
+
 .navbar a {
-   color: white;
-margin: 0 15px;
-text-decoration: none;
-font-weight: 500;
-transition: 0.3s;
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .navbar a:hover {
     color: #d4af37;
 }
-.book-btn {
-    background: #f4b400;
-    color: black;
-    padding: 8px 15px;
-    border-radius: 5px;
-    margin-left: 10px;
-}
 
-.book-btn:hover {
-    background: orange;
-    color: white;
-}
-
-}
+/* ===== HERO ===== */
 header {
-    height: 400px;
+    min-height: 90vh;
     color: white;
+
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+
     text-align: center;
 
     background-size: cover;
     background-position: center;
 
     background-color: rgba(0,0,0,0.4);
-background-blend-mode: darken;
+    background-blend-mode: darken;
 
     animation: slider 15s infinite;
 }
 
 @keyframes slider {
-    0% {
-        background-image: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511');
-    }
-    33% {
-        background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
-    }
-    66% {
-        background-image: url('https://images.unsplash.com/photo-1598928506311-c55ded91a20c');
-    }
-    100% {
-        background-image: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511');
-    }
-}
-section {
-    padding: 40px;
+    0% {background-image: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511');}
+    33% {background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');}
+    66% {background-image: url('https://images.unsplash.com/photo-1598928506311-c55ded91a20c');}
+    100% {background-image: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511');}
 }
 
-.portfolio-box {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    max-width: 700px;
-    margin: -80px auto 40px;
-    box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
-}
- 
-h2 {
-    color: #333;
-}
+/* ===== BUTTON ===== */
 .btn {
     background: linear-gradient(135deg, #d4af37, #000);
     color: white;
-    padding: 12px 25px;
+    padding: 14px 30px;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-    display: inline-block;
-    margin-top: 15px;
+    margin-top: 20px;
+    transition: 0.4s;
 }
 
 .btn:hover {
-    background: linear-gradient(135deg, #000, #d4af37);
-    transform: scale(1.05);
+    transform: scale(1.08);
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* ===== SERVICES ===== */
+.service-box {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+/* ===== PORTFOLIO ===== */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .card {
     background: white;
-    padding: 20px;
-    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
     border-radius: 10px;
 }
+
+/* ===== FOOTER ===== */
 footer {
-    background: black;
-    color: white;
     text-align: center;
     padding: 20px;
+    background: black;
+    color: white;
 }
-iframe {
-    width: 100%;
-    height: 300px;
-    border: none;
-}
-</style>
 
+</style>
 </head>
 
 <body>
-<nav class="navbar">
+
+<!-- NAVBAR -->
+<div class="navbar">
     <h2>Raj Technology</h2>
     <div>
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Services</a>
         <a href="#">Portfolio</a>
-        <a href="#contact" class="book-btn">Book Now</a>
+        <a href="#contact" class="btn">Book Now</a>
     </div>
-</nav>
+</div>
+
+<!-- HERO -->
 <header>
-    <h1 style="font-size: 42px; letter-spacing: 1px;">
+    <h1 style="font-size:48px; text-shadow:0 0 20px rgba(255,255,255,0.6);">
         360° Virtual Tour Services
     </h1>
 
-    <p style="font-size:18px; margin-top:10px;">
+    <p style="font-size:20px; opacity:0.9;">
         Google Street View Trusted Photographer | 1000+ Shoots
     </p>
 
     <a href="#contact" class="btn">Book Now</a>
 </header>
 
-<section>
+<!-- ABOUT -->
+<section class="container">
     <h2>About</h2>
     <p>
-    I’m <b>Raj Bharmal</b>, Google Street View Trusted Photographer from Gujarat.
-    Level 10 contributor with 1000+ live projects helping businesses grow online.
+        I’m Raj Bharmal, Google Street View Trusted Photographer from Gujarat.
+        Helping businesses grow online with 1000+ projects.
     </p>
 </section>
 
-<section>
+<!-- SERVICES -->
+<section class="container">
     <h2>Services</h2>
-    <div class="card">Hotel & Resort 360</div>
-    <div class="card">Showroom 360</div>
-    <div class="card">School / College 360</div>
-    <div class="card">Clinic / Hospital 360</div>
+
+    <div class="service-box">Hotel & Resort 360</div>
+    <div class="service-box">Showroom 360</div>
+    <div class="service-box">School / College 360</div>
+    <div class="service-box">Clinic / Hospital 360</div>
+
 </section>
 
-<section>
+<!-- PORTFOLIO -->
+<section class="container">
     <h2>Portfolio</h2>
-    <div class="portfolio-box">
-    <p style="color:#f4b400;font-weight:bold;">01 // OUR PORTFOLIO</p>
-    <h2 style="font-size:36px;">
-        Explore Our <span style="color:#0f7c67;">Best 360° Virtual Tour</span><br>
-        Work Across Industries
-    </h2>
-</div>
 
-    <div class="card">
-    <div class="card">
-    <h3>Hotel Project</h3>
-    <iframe src="PASTE_HOTEL_LINK_HERE"></iframe>
-</div>
-    <div class="card">
-        <h3>Showroom Project</h3>
-        <iframe src="<iframe src="https://www.google.com/maps/embed?pb=!4v1776511366781!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRFd2SU9oWnc.!2m2!1d22.81324724434344!2d70.83539515407432!3f240!4f0!5f0.7820865974627469" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"></iframe>
+    <div class="portfolio">
+
+        <div class="card">
+            <h3>Hotel Project</h3>
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+        </div>
+
+        <div class="card">
+            <h3>Showroom Project</h3>
+            <img src="https://images.unsplash.com/photo-1582582494700-fc3a9c0c1d3c">
+        </div>
+
     </div>
 
 </section>
 
-<section>
+<!-- PRICING -->
+<section class="container">
     <h2>Pricing</h2>
     <p>100–400 sq.ft – ₹15,000</p>
     <p>400–700 sq.ft – ₹22,000</p>
     <p>700–1200 sq.ft – ₹30,000</p>
 </section>
 
-<section id="contact">
+<!-- CONTACT -->
+<section class="container" id="contact">
     <h2>Contact</h2>
     <p>Name: Raj Bharmal</p>
-    <p>Phone: +919898399952</p>
-    <p>Business: Raj Technology</p>
+    <p>Phone: +91 9898399952</p>
     <p>Location: Gujarat</p>
 </section>
 
 <footer>
-    <p>© Raj Technology</p>
+    © Raj Technology
 </footer>
-<a href="https://wa.me/919898399952" target="_blank" 
-style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%;text-decoration:none;">
-WhatsApp
-</a>
+
 </body>
 </html>
