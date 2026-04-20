@@ -3,120 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>360 Virtual Tour - Raj Technology</title>
+<title>Raj360View</title>
 
 <style>
-
-/* ===== BODY ===== */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f5f5f5;
+    background: #0f0f0f;
+    color: white;
 }
 
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 .navbar {
     position: sticky;
     top: 0;
-    z-index: 1000;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
     background: rgba(0,0,0,0.8);
     backdrop-filter: blur(10px);
-
+    display: flex;
+    justify-content: space-between;
     padding: 15px 40px;
-}
-
-.navbar h2 {
-    color: white;
-    letter-spacing: 2px;
+    z-index: 1000;
 }
 
 .navbar a {
     color: white;
-    margin: 0 15px;
+    margin: 0 10px;
     text-decoration: none;
-    transition: 0.3s;
 }
 
-.navbar a:hover {
-    color: #d4af37;
-}
-
-/* ===== HERO ===== */
+/* HERO */
 header {
-    min-height: 90vh;
-    color: white;
-
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
 
-    background-size: cover;
-    background-position: center;
-
-    background-color: rgba(0,0,0,0.4);
-    background-blend-mode: darken;
-
-    animation: slider 15s infinite;
+    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center/cover;
 }
 
-@keyframes slider {
-    0% {background-image: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511');}
-    33% {background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');}
-    66% {background-image: url('https://images.unsplash.com/photo-1598928506311-c55ded91a20c');}
-    100% {background-image: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511');}
+header h1 {
+    font-size: 48px;
 }
 
-/* ===== BUTTON ===== */
+header p {
+    opacity: 0.9;
+}
+
+/* BUTTON */
 .btn {
-    background: linear-gradient(135deg, #d4af37, #000);
-    color: white;
-    padding: 14px 30px;
+    background: linear-gradient(135deg,#d4af37,#000);
+    padding: 12px 25px;
     border-radius: 30px;
     text-decoration: none;
+    color: white;
     margin-top: 20px;
-    transition: 0.4s;
 }
 
-.btn:hover {
-    transform: scale(1.08);
+/* SECTION */
+section {
+    padding: 60px 20px;
 }
 
-/* ===== CONTAINER ===== */
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
-}
-
-/* ===== SERVICES ===== */
+/* SERVICES */
 .service-box {
-    background: white;
-    padding: 15px;
+    background: #1a1a1a;
     margin: 10px 0;
+    padding: 15px;
     border-radius: 10px;
 }
 
-/* ===== PORTFOLIO ===== */
-.portfolio {
+/* PORTFOLIO */
+.grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
     gap: 20px;
 }
 
 .card {
-    background: white;
+    background: #1a1a1a;
     padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;
 }
 
 .card img {
@@ -124,14 +92,12 @@ header {
     border-radius: 10px;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
     background: black;
-    color: white;
 }
-
 </style>
 </head>
 
@@ -139,86 +105,99 @@ footer {
 
 <!-- NAVBAR -->
 <div class="navbar">
-    <h2>Raj Technology</h2>
+    <h2>Raj360View</h2>
     <div>
         <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Portfolio</a>
-        <a href="#contact" class="btn">Book Now</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
     </div>
 </div>
 
 <!-- HERO -->
 <header>
-    <h1 style="font-size:48px; text-shadow:0 0 20px rgba(255,255,255,0.6);">
-        360° Virtual Tour Services
-    </h1>
-
-    <p style="font-size:20px; opacity:0.9;">
-        Google Street View Trusted Photographer | 1000+ Shoots
-    </p>
-
+    <h1>360° Virtual Tour Services</h1>
+    <p>Google Street View Trusted Photographer | 1000+ Shoots</p>
     <a href="#contact" class="btn">Book Now</a>
 </header>
 
 <!-- ABOUT -->
-<section class="container">
+<section id="about">
     <h2>About</h2>
     <p>
-        I’m Raj Bharmal, Google Street View Trusted Photographer from Gujarat.
-        Helping businesses grow online with 1000+ projects.
+        I’m Raj Bharmal, a Google Street View Trusted Photographer from Gujarat. 
+        I help businesses grow online by creating high-quality 360° virtual tours that increase visibility, trust, and customer engagement.
     </p>
 </section>
 
 <!-- SERVICES -->
-<section class="container">
+<section>
     <h2>Services</h2>
-
     <div class="service-box">Hotel & Resort 360</div>
     <div class="service-box">Showroom 360</div>
-    <div class="service-box">Clinic / Hospital 360</div>
-
 </section>
 
 <!-- PORTFOLIO -->
-<section class="container">
+<section id="portfolio">
     <h2>Portfolio</h2>
 
-    <div class="portfolio">
+    <h3>Hotel Projects</h3>
+    <div class="grid">
 
         <div class="card">
-            <h3>Hotel Project</h3>
-            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+            <a href="https://maps.app.goo.gl/xYgYyx84UpZfcdBy8" target="_blank">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+            </a>
+            <p>AFM Food Mall</p>
         </div>
 
         <div class="card">
-            <h3>Showroom Project</h3>
-            <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a" width="100%">
+            <a href="https://maps.app.goo.gl/7HFfiTai1wpWVrwC9" target="_blank">
+                <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
+            </a>
+            <p>Hotel The Grand Vaibhav</p>
+        </div>
+
+        <div class="card">
+            <a href="https://maps.app.goo.gl/aKa4pGG8SzQiNbSU8" target="_blank">
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+            </a>
+            <p>The Grand Thakar</p>
         </div>
 
     </div>
 
-</section>
+    <h3>Showroom Projects</h3>
+    <div class="grid">
 
-<!-- PRICING -->
-<section class="container">
-    <h2>Pricing</h2>
-    <p>100–400 sq.ft – ₹15,000</p>
-    <p>400–700 sq.ft – ₹22,000</p>
-    <p>700–1200 sq.ft – ₹30,000</p>
+        <div class="card">
+            <a href="https://maps.app.goo.gl/FbUc7rCTdoY8vZYa8" target="_blank">
+                <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a">
+            </a>
+            <p>PHYSIOFIT</p>
+        </div>
+
+        <div class="card">
+            <a href="https://maps.app.goo.gl/ZT7kB1g3DhYMQWWw7" target="_blank">
+                <img src="https://images.unsplash.com/photo-1582582429416-1d8f0d0e0cbb">
+            </a>
+            <p>Silk Touch</p>
+        </div>
+
+    </div>
 </section>
 
 <!-- CONTACT -->
-<section class="container" id="contact">
+<section id="contact">
     <h2>Contact</h2>
-    <p>Name: Raj Bharmal</p>
     <p>Phone: +91 9898399952</p>
-    <p>Location: Gujarat</p>
+    <p>Email: info@rajtechnology.com</p>
+    <p>Location: Rajkot</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
-    © Raj Technology
+    © 2026 Raj360View
 </footer>
 
 </body>
